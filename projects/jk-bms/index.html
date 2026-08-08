@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JK BMS Monitor | GS Labs</title>
+<meta name="description" content="JK BMS Monitor by GS Labs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}:root{--bg:#06100c;--green:#52ff9a;--green2:#20d874;--text:#f4fff8;--muted:#9cb2a4;--border:rgba(82,255,154,.16);--card:rgba(16,34,26,.72)}
+body{font-family:Inter,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 8%,rgba(82,255,154,.13),transparent 25%),radial-gradient(circle at 85% 30%,rgba(32,216,116,.07),transparent 24%),var(--bg)}
+a{text-decoration:none;color:inherit}.container{width:min(1160px,90%);margin:auto}nav{position:sticky;top:0;z-index:20;background:rgba(6,16,12,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Space Grotesk";font-size:21px;font-weight:700}.brand span{color:var(--green)}.back{font-size:13px;color:var(--muted)}
+.hero{padding:92px 0 70px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(82,255,154,.28);border-radius:99px;color:var(--green);font-size:11px;font-weight:800;background:rgba(82,255,154,.05)}h1,h2,h3{font-family:"Space Grotesk"}.hero h1{font-size:clamp(48px,8vw,92px);letter-spacing:-4px;line-height:.95;margin-top:24px}.hero h1 span{color:var(--green)}.lead{max-width:760px;margin:24px auto 0;color:var(--muted);line-height:1.8;font-size:17px}.price{margin-top:25px;font-size:14px;color:var(--muted)}.price strong{font-size:32px;color:var(--text);margin-left:8px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:1px solid var(--border);border-radius:13px;padding:14px 20px;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}.primary{background:var(--green);color:#031008}.secondary{background:rgba(255,255,255,.03)}
+.bank-btn{
+  background:linear-gradient(135deg,#52ff9a,#20d874);
+  color:#031008;
+  border-color:#52ff9a;
+  box-shadow:0 10px 30px rgba(82,255,154,.18);
+}
+.bank-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(82,255,154,.28);
+  filter:brightness(1.04);
+}
+.app-shot{max-width:850px;margin:55px auto 0;padding:18px;border:1px solid var(--border);border-radius:30px;background:rgba(255,255,255,.025);box-shadow:0 40px 120px rgba(0,0,0,.42)}.dashboard{padding:30px;border-radius:22px;background:linear-gradient(145deg,rgba(82,255,154,.08),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.05);text-align:left}.dash-head{display:flex;justify-content:space-between}.online{color:var(--green);font-size:11px}.battery{display:grid;grid-template-columns:.7fr 1.3fr;gap:24px;align-items:center;margin-top:28px}.ring{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#0b1812 57%,transparent 58%),conic-gradient(var(--green) 0 300deg,rgba(255,255,255,.06) 300deg)}.ring strong{font-size:40px}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{padding:18px;border:1px solid rgba(255,255,255,.05);border-radius:15px;background:rgba(255,255,255,.025)}.metric small{color:var(--muted)}.metric b{display:block;margin-top:6px;font-size:18px}
+section{padding:90px 0}.tag{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--green);margin-bottom:12px}.title{font-size:clamp(34px,5vw,52px);letter-spacing:-2px}.desc{max-width:680px;color:var(--muted);line-height:1.8;margin-top:15px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:40px}.card{padding:26px;border-radius:22px;background:var(--card);border:1px solid var(--border)}.icon{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;background:rgba(82,255,154,.09);color:var(--green);margin-bottom:30px}.card h3{font-size:19px}.card p{color:var(--muted);line-height:1.7;font-size:13px;margin-top:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:40px}.step-num{font-size:12px;color:var(--green);font-weight:800;margin-bottom:16px}
+.ha{margin-top:38px;padding:28px;border-radius:24px;border:1px solid var(--border);background:linear-gradient(135deg,rgba(82,255,154,.07),rgba(255,255,255,.02));display:flex;justify-content:space-between;gap:20px;align-items:center}.ha p{color:var(--muted);font-size:13px;margin-top:7px;line-height:1.6}
+.buybox{padding:45px;border-radius:28px;border:1px solid rgba(82,255,154,.3);background:radial-gradient(circle at 100% 0,rgba(82,255,154,.1),transparent 30%),rgba(255,255,255,.025);display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.buyprice{font-size:44px;font-family:"Space Grotesk";font-weight:700}.buyprice small{font-family:Inter;font-size:12px;color:var(--muted);font-weight:500}.pay-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.note{margin-top:18px;color:var(--muted);font-size:12px;line-height:1.6}.made{text-align:center;color:var(--muted);font-size:12px;padding:28px;border-top:1px solid rgba(255,255,255,.05)}.made b{color:var(--green)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);display:none;place-items:center;z-index:50;padding:20px}.modal.show{display:grid}.modal-card{width:min(560px,100%);border:1px solid var(--border);border-radius:25px;background:#0b1812;padding:28px;box-shadow:0 40px 120px rgba(0,0,0,.5)}.modal-head{display:flex;justify-content:space-between;gap:20px;align-items:center}.close{border:0;background:rgba(255,255,255,.06);color:white;width:36px;height:36px;border-radius:10px;cursor:pointer}.bank-details{margin-top:22px;display:grid;gap:10px}.bank-row{padding:14px;border:1px solid rgba(255,255,255,.07);border-radius:12px;background:rgba(255,255,255,.025)}.bank-row small{display:block;color:var(--muted);font-size:10px;margin-bottom:5px}.placeholder{color:#d7e5dc}.warning{margin-top:18px;color:#b9c8bf;font-size:12px;line-height:1.6}
+@media(max-width:850px){.features,.steps{grid-template-columns:1fr}.battery,.buybox{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.pay-buttons{justify-content:flex-start}}
+@media(max-width:520px){.metrics{grid-template-columns:1fr}.hero h1{font-size:50px}.buybox{padding:28px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><a class="brand" href="../../index.html">GS <span>Labs</span></a><a class="back" href="../../index.html">← Back to GS Labs</a></div></nav>
+
+<header class="hero"><div class="container">
+<div class="eyebrow">● GS LABS PRODUCT</div>
+<h1>JK BMS <span>Monitor</span></h1>
+<p class="lead">A modern monitoring experience for JK battery management systems, designed to make important battery information easier to read and access.</p>
+<div class="price">One-time price <strong>LKR 4,200</strong></div>
+<div class="actions"><a class="btn primary" href="#buy">Buy Now →</a><a class="btn secondary" href="#features">Explore Features</a></div>
+<div class="app-shot"><div class="dashboard"><div class="dash-head"><div><small style="color:#9cb2a4">LIVE BATTERY OVERVIEW</small><h3>JK BMS Monitor</h3></div><span class="online">● CONNECTED</span></div><div class="battery"><div class="ring"><strong>83%</strong></div><div class="metrics"><div class="metric"><small>Pack Voltage</small><b>27.6 V</b></div><div class="metric"><small>Current</small><b>14.8 A</b></div><div class="metric"><small>Power</small><b>408 W</b></div><div class="metric"><small>Temperature</small><b>31 °C</b></div></div></div></div></div>
+</div></header>
+
+<section id="features"><div class="container"><div class="tag">FEATURES</div><h2 class="title">Built for clear battery monitoring.</h2><p class="desc">The product page is ready for you to replace the example feature text below with the exact functions included in your final app.</p>
+<div class="features">
+<div class="card"><div class="icon">01</div><h3>Battery Overview</h3><p>View essential battery information from one clean dashboard designed for quick reading.</p></div>
+<div class="card"><div class="icon">02</div><h3>Cell Information</h3><p>Keep individual cell information organised so differences are easier to identify.</p></div>
+<div class="card"><div class="icon">03</div><h3>Live Status</h3><p>Present connection and battery status in a simple interface built around real-time monitoring.</p></div>
+<div class="card"><div class="icon">04</div><h3>Voltage & Current</h3><p>See key electrical readings including voltage, current and power in one place.</p></div>
+<div class="card"><div class="icon">05</div><h3>Temperature</h3><p>Display available temperature readings and system information through a modern UI.</p></div>
+<div class="card"><div class="icon">06</div><h3>Modern Interface</h3><p>A dark green GS Labs interface inspired by smart-energy and battery monitoring systems.</p></div>
+</div></div></section>
+
+
+
+<section id="buy"><div class="container"><div class="buybox"><div><div class="tag">PURCHASE</div><h2 class="title">Get JK BMS Monitor</h2><p class="desc">Choose bank transfer or a secure online checkout.</p><div class="buyprice">LKR 4,200 <small>one-time</small></div><p class="note">After a confirmed payment, show the customer your success message and direct them to contact GS Labs on WhatsApp for the next step.</p></div>
+<div class="pay-buttons"><button class="btn bank-btn" onclick="openBank()">Bank Transfer</button><a class="btn primary" id="payhereButton" href="PAYHERE_PAYMENT_LINK_HERE">Pay Securely</a></div></div>
+<p class="note"><b>Important:</b> Do not place card-number or CVV fields directly on this page. Keep card entry inside your approved payment provider's secure checkout.</p>
+</div></section>
+
+<div class="modal" id="bankModal" onclick="outsideClose(event)"><div class="modal-card"><div class="modal-head"><div><div class="tag">BANK TRANSFER</div><h2>Transfer Details</h2></div><button class="close" onclick="closeBank()">×</button></div>
+<div class="bank-details">
+<div class="bank-row"><small>BANK NAME</small><span class="placeholder">YOUR BANK NAME HERE</span></div>
+<div class="bank-row"><small>ACCOUNT NAME</small><span class="placeholder">YOUR ACCOUNT NAME HERE</span></div>
+<div class="bank-row"><small>ACCOUNT NUMBER</small><span class="placeholder">YOUR ACCOUNT NUMBER HERE</span></div>
+<div class="bank-row"><small>BRANCH</small><span class="placeholder">YOUR BRANCH HERE</span></div>
+<div class="bank-row"><small>AMOUNT</small><strong>LKR 4,200</strong></div>
+</div>
+<p class="warning">After transferring the payment, send your payment receipt and order details to GS Labs on WhatsApp.</p>
+<a class="btn primary" style="width:100%;margin-top:16px" href="https://wa.me/94XXXXXXXXX?text=Hello%20GS%20Labs%2C%20I%20paid%20LKR%204200%20for%20JK%20BMS%20Monitor." target="_blank" rel="noopener">Message GS Labs on WhatsApp</a>
+</div></div>
+
+<footer class="made">JK BMS Monitor · Made by <b>GS Labs</b></footer>
+<script>
+function openBank(){document.getElementById('bankModal').classList.add('show')}
+function closeBank(){document.getElementById('bankModal').classList.remove('show')}
+function outsideClose(e){if(e.target.id==='bankModal')closeBank()}
+const secureBtn=document.getElementById('payhereButton');
+secureBtn.addEventListener('click',function(e){
+  if(this.getAttribute('href')==='PAYHERE_PAYMENT_LINK_HERE'){
+    e.preventDefault();
+    alert('Add your approved payment gateway link to PAYHERE_PAYMENT_LINK_HERE before publishing.');
+  }
+});
+</script>
+</body>
+</html>
